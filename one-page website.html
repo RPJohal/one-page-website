@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Page Lightbox Gallery</title>
+    <!-- Linking our external CSS stylesheet -->
+    <link rel="stylesheet" href="one_page_website.css">
+</head>
+<body>
+
+    <h2 style="text-align:center">My Image Gallery</h2>
+
+    <!-- The Grid Layout for Thumbnails -->
+    <div class="row">
+        <!-- We use 3 images, so each column will take up 33.3% width -->
+        <div class="column">
+            <img src="https://picsum.photos/id/10/300/200" onclick="openLightbox();currentSlide(1)" class="hover-shadow" alt="Forest Hills">
+        </div>
+        <div class="column">
+            <img src="https://picsum.photos/id/20/300/200" onclick="openLightbox();currentSlide(2)" class="hover-shadow" alt="Desk Setup">
+        </div>
+        <div class="column">
+            <img src="https://picsum.photos/id/28/300/200" onclick="openLightbox();currentSlide(3)" class="hover-shadow" alt="Mountain Lake">
+        </div>
+    </div>
+
+    <!-- The Lightbox Modal (Hidden by default) -->
+    <div id="myLightbox" class="modal">
+        <span class="close cursor" onclick="closeLightbox()">&times;</span>
+        <div class="modal-content">
+
+            <!-- Large Slide 1 -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://picsum.photos/id/10/900/600" style="width:100%" alt="Forest Hills Large">
+            </div>
+
+            <!-- Large Slide 2 -->
+            <div class="mySlides">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://picsum.photos/id/20/900/600" style="width:100%" alt="Desk Setup Large">
+            </div>
+
+            <!-- Large Slide 3 -->
+            <div class="mySlides">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://picsum.photos/id/28/900/600" style="width:100%" alt="Mountain Lake Large">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text beneath the large image -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linking our JavaScript file at the very bottom of the body -->
+    <script src="JS/one_page_website.js"></script>
+</body>
+</html>
